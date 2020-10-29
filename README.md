@@ -11,6 +11,9 @@ the project space of league of opensource team
 # How to save data
 * we use free online storage such as Google drive to hold the dataset that is too big to be shared across using github
 
+# How to deploy model
+* Cortex framework
+
 # How to coding
 * Google Colab
 * Local Enviroment
