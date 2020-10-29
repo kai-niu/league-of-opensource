@@ -1,0 +1,8 @@
+- name: iris-model
+  kind: RealtimeAPI
+  predictor:
+    type: python
+    path: predictor.py
+    config:
+      bucket: foo-bucket
+      key: bar-folder/model-foobar.pkl
