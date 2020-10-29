@@ -4,5 +4,5 @@
     type: python
     path: predictor.py
     config:
-      bucket: foo-bucket
-      key: bar-folder/model-foobar.pkl
+      bucket: cortex-ee16ff5ab7
+      key: dev/toy_model.pkl
