@@ -21,6 +21,6 @@ class PythonPredictor:
 
     def predict(self, payload):
    
-        proba = self.model.predict_proba([payload['data']])[0]
-        result = [float(val) for val in proba]
-        return json.dumps({'prob':result, 'label':int(np.argmax(result))})
+        proba = self.model.predict_proba(payload['data']).tolist()
+        label = self.model.predict(payload['data']).tolist()
+        return json.dumps({'prob':proba, 'label':label})
