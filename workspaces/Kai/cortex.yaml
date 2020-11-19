@@ -1,4 +1,4 @@
-- name: gamification-model
+- name: home-purchase-model
   kind: RealtimeAPI
   predictor:
     type: python

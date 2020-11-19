@@ -2,7 +2,7 @@
 import os
 import pickle
 
-labels = ["True", "False"]
+labels = ["False", "True"]
 
 
 class PythonPredictor:
@@ -15,7 +15,7 @@ class PythonPredictor:
 
         s3.download_file(config["bucket"], config["key"], "/tmp/model.pkl")
         """
-        self.model = pickle.load(open("lgbm_model.pkl", "rb"))
+        self.model = pickle.load(open("home_purchase.pkl", "rb"))
 
     def predict(self, payload):
    
