@@ -1,10 +1,12 @@
 
 import os
 import pickle
+import numpy as np
+import json
 
 labels = ["False", "True"]
 
-
+# life relocation model
 class PythonPredictor:
     def __init__(self, config):
         """
@@ -15,9 +17,10 @@ class PythonPredictor:
 
         s3.download_file(config["bucket"], config["key"], "/tmp/model.pkl")
         """
-        self.model = pickle.load(open("home_purchase.pkl", "rb"))
+        self.model = pickle.load(open("life_allocation.pkl", "rb"))
 
     def predict(self, payload):
    
-        label_id = self.model.predict([payload['data']])[0]
-        return labels[label_id]
+        proba = self.model.predict_proba([payload['data']])[0]
+        result = [float(val) for val in proba]
+        return json.dumps({'prob':result, 'label':int(np.argmax(result))})

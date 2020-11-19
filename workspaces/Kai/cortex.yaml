@@ -1,8 +1,8 @@
-- name: home-purchase-model
+- name: life-relocation-model
   kind: RealtimeAPI
   predictor:
     type: python
     path: predictor.py
     config:
-      bucket: cortex-ee16ff5ab7
-      key: dev/lgbm_model.pkl
+      bucket: gamification-ee16ff5ab7
+      key: dev/life_allocation.pkl
