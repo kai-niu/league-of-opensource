@@ -1,3 +1,6 @@
 pandas
 scikit-learn
+<<<<<<< HEAD
 lightgbm
+=======
+>>>>>>> f8c9eeb007a6243380737fb73d6f2979ccb5d99d

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 - name: gamification-model
+=======
+- name: iris-model
+>>>>>>> f8c9eeb007a6243380737fb73d6f2979ccb5d99d
   kind: RealtimeAPI
   predictor:
     type: python
     path: predictor.py
     config:
       bucket: cortex-ee16ff5ab7
+<<<<<<< HEAD
       key: dev/lgbm_model.pkl
+=======
+      key: dev/toy_model.pkl
+>>>>>>> f8c9eeb007a6243380737fb73d6f2979ccb5d99d
